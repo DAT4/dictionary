@@ -1,5 +1,13 @@
 # Crossword dictionary on a flask service
 
+## Requirements
+
+The app uses flask as a webserver:
+`pip install flask`
+
+For RESTful API this flask extension is used
+`pip install flask-restful`
+
 ## How to run the program
 
 1. execute the app.py
