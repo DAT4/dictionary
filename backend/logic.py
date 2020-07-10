@@ -7,7 +7,7 @@ def search(word):
     try:
         return {'success':{word:dictionary[word]}}
     except:
-        return {'error':'Word doesn\'t exist in dictionary'}
+        return {'error':{word:f'''The word "{' '.join([x for x in word])}" doesn't exist in dictionary'''}}, 404
 
 
 def complex_search(word):
@@ -25,9 +25,9 @@ def complex_search(word):
         if re.fullmatch(regex,i):
             searchwords.append({i:dictionary[i]})
     if searchwords != []:
-        return {'success':searchwords}
+        return {'success':{word:searchwords}}
     else:
-        return {'error':'Word doesn\'t exist in dictionary'}
+        return {'error':{word:f'''The word "{' '.join([x for x in word])}" doesn't exist in dictionary'''}}, 404
 
 def parse_text_and_import_to_database(text):
     dictionary      = {}

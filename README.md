@@ -10,11 +10,31 @@ For RESTful API this flask extension is used
 
 ## How to run the program
 
-1. execute the app.py
-2. open a brower 
-3. go to http://127.0.0.1:5000/<your search query>
+1. execute the app.py in the backend directory
+2. open a browser 
+3. open the index.html in the frontend directory
+4. search a word
 
-**Examples**
+**Examples of searching**
+
+To search a specific word:
+![Specific word](documentation/images/full.png)
+
+To search a partial word:
+![Partial word](documentation/images/partial.png)
+
+To search any word with a specific lentgh
+![Unknown word](documentation/images/length.png)
+
+If the word exist in the database then you will get a HTTP resposte containing a JSON object
+
+If the word does not exist in the database you will get an error:
+![Error](documentation/images/error.png)
+
+
+## The API
+
+**Examples of the API**
 
 To search a specific word:
 
