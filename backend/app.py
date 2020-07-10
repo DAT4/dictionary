@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Resource, Api
-from logic import search, complex_search
+from search_logic import search, complex_search
 
 app = Flask(__name__)
 api = Api(app)
